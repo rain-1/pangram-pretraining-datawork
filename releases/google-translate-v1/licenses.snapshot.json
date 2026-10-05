@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-03T12:30:41.256399+00:00",
+  "updated_utc": "2026-10-03T11:01:41.463823+00:00",
   "project_use": "User confirmed non-commercial research purpose for NEWSROOM.",
   "scope": "Dataset-specific source/license inventory; declared metadata is distinguished from independently reviewed rights.",
   "news_input_manifest": "data/news/acquisition.json",
@@ -16,8 +16,7 @@
         "data/corpus-words-v2",
         "data/curated-v1",
         "data/curated-v2",
-        "data/quality-v2",
-        "data/corpus-human-diverse-v1"
+        "data/quality-v2"
       ],
       "license": "unknown",
       "license_status": "unspecified_in_upstream_card",
@@ -32,8 +31,7 @@
         "Publisher-specific rights review remains open.",
         "First curation exports unreviewed human-origin candidates, original text and large spans; shared inventory.sqlite and review_queue.jsonl also contain text.",
         "Word-counted span assembly retains per-record dataset/license metadata; selection.sqlite also stores source text.",
-        "Quality v2 artifacts retain original character ranges and licence metadata; shared review and SQLite records also contain text.",
-        "Diverse human candidate mixture retains genre/source/byline confidence bases and original licensing uncertainty; parent_documents export also contains text."
+        "Quality v2 artifacts retain original character ranges and licence metadata; shared review and SQLite records also contain text."
       ],
       "evidence_sha256": {
         "data/raw/news/documentation/cc-news-card.txt": "1ae63d9cc92254572449f1fb8bda86e0b001cc8cb951929b6df34db7eea74fcb"
@@ -51,28 +49,15 @@
         "data/corpus-words-v2",
         "data/curated-v1",
         "data/curated-v2",
-        "data/quality-v2",
-        "data/corpus-human-diverse-v1"
+        "data/quality-v2"
       ],
       "license": "CC-BY-4.0 or CC-BY-SA-4.0 per document",
       "license_status": "declared_in_document_metadata_not_independently_verified",
       "evidence_urls": [
-        "https://globalvoices.org/about/",
-        "https://globalvoices.org/about/global-voices-attribution-policy/",
-        "https://globalvoices.org/about/global-voices-policy-on-ai/",
-        "https://huggingface.co/datasets/common-pile/news",
-        "https://lingua.globalvoices.org/",
-        "https://www.altnews.in/about/",
-        "https://www.altnews.in/methodology-for-fact-checking/"
+        "https://huggingface.co/datasets/common-pile/news"
       ],
       "license_evidence_files": [
-        "data/raw/news/documentation/common-pile-news-card.txt",
-        "data/raw/news/source-policies/globalvoices-about.html",
-        "data/raw/news/source-policies/globalvoices-ai-policy.html",
-        "data/raw/news/source-policies/globalvoices-republishing.html",
-        "data/raw/news/source-policies/globalvoices-lingua.html",
-        "data/raw/news/source-policies/altnews-about.html",
-        "data/raw/news/source-policies/altnews-methodology.html"
+        "data/raw/news/documentation/common-pile-news-card.txt"
       ],
       "license_field": "metadata.license",
       "rights_identity_field": "metadata.url",
@@ -81,52 +66,19 @@
         "Source labels can include outbound links: verify the actual publisher and applicable license.",
         "First curation exports unreviewed human-origin candidates, original text and large spans; shared inventory.sqlite and review_queue.jsonl also contain text.",
         "Word-counted span assembly retains per-record dataset/license metadata; selection.sqlite also stores source text.",
-        "Quality v2 artifacts retain original character ranges and licence metadata; shared review and SQLite records also contain text.",
-        "Current source policy snapshots reveal CC-BY 3.0/4.0 version discrepancies for Global Voices and Alt News; raw upstream labels are preserved and separately annotated in corpus-words-v2.",
-        "Diverse human candidate mixture retains genre/source/byline confidence bases and original licensing uncertainty; parent_documents export also contains text."
+        "Quality v2 artifacts retain original character ranges and licence metadata; shared review and SQLite records also contain text."
       ],
       "evidence_sha256": {
-        "data/raw/news/documentation/common-pile-news-card.txt": "d9d4ad1d932c3f8db495d49a31bb339f82575a46635860af2f3601bc4186e2d9",
-        "data/raw/news/source-policies/globalvoices-about.html": "2a99830f286f4e77a853b8e204c861a7d89a07c9cf2c370c8c0ea3b028ee6e9a",
-        "data/raw/news/source-policies/globalvoices-ai-policy.html": "f95d723f481ea2ea73ad205405303fc99b9c6b2583a1d7aac0bfcd9a7c1844f8",
-        "data/raw/news/source-policies/globalvoices-republishing.html": "56511b7e7049fd9576c0d390d5ef08db68be5a9a37691bfdc1d7c1a5b9f64a7f",
-        "data/raw/news/source-policies/globalvoices-lingua.html": "eb8bff878acdc6bc2440c333f3bec74c99fa1da5d96126a5585135b8f9e70e0b",
-        "data/raw/news/source-policies/altnews-about.html": "6abb56e550f4a221574ed1ed8140b610e8ca7c8ae0274d1e869b38a434a31f20",
-        "data/raw/news/source-policies/altnews-methodology.html": "3f90e06a62378468bd2672eace804206f48a0eb43c0b9a882c67f81850ddcaa5"
+        "data/raw/news/documentation/common-pile-news-card.txt": "d9d4ad1d932c3f8db495d49a31bb339f82575a46635860af2f3601bc4186e2d9"
       },
-      "shared_export_dataset_id": "common_pile_news",
-      "publisher_observations": {
-        "globalvoices.org": {
-          "upstream_declared_license": "CC-BY-4.0",
-          "publisher_observed_license": "CC-BY-3.0",
-          "status": "license_version_mismatch_requires_reconciliation",
-          "observed_at_utc": "2026-10-03T11:06:44.020770+00:00",
-          "evidence_url": "https://globalvoices.org/about/",
-          "evidence_file": "data/raw/news/source-policies/globalvoices-about.html",
-          "evidence_sha256": "2a99830f286f4e77a853b8e204c861a7d89a07c9cf2c370c8c0ea3b028ee6e9a",
-          "authorship_policy_url": "https://globalvoices.org/about/global-voices-policy-on-ai/",
-          "authorship_policy_updated_date": "2026-09-09",
-          "authorship_scope": "Current publisher policy supports writer/translator provenance and prohibits automatically generated writing or translation; does not attest the retained historical article versions."
-        },
-        "altnews.in": {
-          "upstream_declared_license": "CC-BY-4.0",
-          "publisher_observed_license": "CC-BY-3.0",
-          "status": "license_version_mismatch_requires_reconciliation",
-          "observed_at_utc": "2026-10-03T11:06:44.020770+00:00",
-          "evidence_url": "https://www.altnews.in/about/",
-          "evidence_file": "data/raw/news/source-policies/altnews-about.html",
-          "evidence_sha256": "6abb56e550f4a221574ed1ed8140b610e8ca7c8ae0274d1e869b38a434a31f20",
-          "exceptions": "Publisher expressly excludes externally sourced Facebook/Twitter/platform material from its general content license."
-        }
-      }
+      "shared_export_dataset_id": "common_pile_news"
     },
     {
       "id": "hansard",
       "acquisition_status": "bounded_prefix_downloaded",
       "raw_paths": [
         "data/raw/hansard_prefix.jsonl",
-        "data/raw/hansard_prefix.manifest.json",
-        "data/raw/human-core-evidence"
+        "data/raw/hansard_prefix.manifest.json"
       ],
       "text_exports": [
         "data/corpus-demo",
@@ -136,21 +88,14 @@
         "data/curated-v1",
         "data/curated-v2",
         "data/pilot",
-        "data/quality-v2",
-        "data/corpus-human-core-v1",
-        "data/corpus-human-diverse-v1",
-        "data/corpus-human-diverse-core-v1",
-        "data/ready/human-core-v1/",
-        "data/raw/ready-core-v1/"
+        "data/quality-v2"
       ],
       "shared_export_dataset_id": "hansard",
       "license": "Open Parliament Licence",
       "license_status": "declared_in_upstream_document_metadata",
       "evidence_urls": [
         "https://huggingface.co/datasets/common-pile/uk_hansard",
-        "https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/",
-        "https://www.parliament.uk/about/how/business/written-answers/",
-        "https://publications.parliament.uk/pa/cm200405/cmselect/cmpubadm/449/44905.htm"
+        "https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/"
       ],
       "license_field": "metadata.license",
       "notes": [
@@ -158,21 +103,9 @@
         "Authorship is labelled human_candidate, not certified human.",
         "First curation exports unreviewed human-origin candidates, original text and large spans; shared inventory.sqlite and review_queue.jsonl also contain text.",
         "Word-counted span assembly retains per-record dataset/license metadata; selection.sqlite also stores source text.",
-        "Quality v2 artifacts retain original character ranges and licence metadata; shared review and SQLite records also contain text.",
-        "Human core v1 is an unchanged subset of historical named Lords written-question/answer prose through 2010; attribution included. High source/date confidence is not individual authorship certification; third-party and personal-data exceptions to OPL remain applicable.",
-        "Diverse human candidate mixture retains genre/source/byline confidence bases and original licensing uncertainty; parent_documents export also contains text."
+        "Quality v2 artifacts retain original character ranges and licence metadata; shared review and SQLite records also contain text."
       ],
-      "evidence_sha256": {
-        "data/raw/human-core-evidence/1999-archive-check.txt": "d3c3de1c3fba29f70d1a98d0c22e1dc34326e79b07e1fbf604c490c4754ecd18",
-        "data/raw/human-core-evidence/retrieval.json": "5f8b366ac4e862f4277d90d46fdf5473a0cd9b4f849466da0fec9e5dcb1795d2",
-        "data/raw/human-core-evidence/web-evidence.txt": "e3b1e4d7fb62a08a0a60e2683809abf0b332bf9602c2cfcfda4c35d3602176c8"
-      },
-      "license_evidence_files": [
-        "data/raw/human-core-evidence/1999-archive-check.txt",
-        "data/raw/human-core-evidence/retrieval.json",
-        "data/raw/human-core-evidence/web-evidence.txt"
-      ],
-      "portable_selection_recipe": "releases/human-core-v1/recipe.json"
+      "evidence_sha256": {}
     },
     {
       "id": "wmt21_zhen",
@@ -335,8 +268,7 @@
       ],
       "text_exports": [
         "data/detector-par3-v1",
-        "data/detector-par3-v2",
-        "data/ready/google-translate-v1/"
+        "data/detector-par3-v2"
       ],
       "shared_export_dataset_id": "par3",
       "license": "MIT for software/documentation; rights in individual English translations not established",
@@ -358,81 +290,9 @@
         "Research controls only; no Par3 material included in pretraining corpus.",
         "Generation dates and exact Google engine versions are unknown; release paragraphs are shuffled and must not be concatenated.",
         "Par3 v2 groups identified volumes/trilogies together; preliminary v1 split is superseded and should not be mixed with v2."
-      ],
-      "portable_selection_recipe": "releases/google-translate-v1/selection.json",
-      "portable_source_configuration": "releases/google-translate-v1/source.json"
-    },
-    {
-      "id": "wikitext2_raw",
-      "name": "WikiText-2 raw, official Salesforce distribution",
-      "acquisition_status": "downloaded_verified",
-      "raw_paths": [
-        "data/raw/diverse-human"
-      ],
-      "shared_raw_selector": "acquisition.json files[].dataset == wikitext2_raw",
-      "text_exports": [
-        "data/corpus-human-diverse-v1",
-        "data/corpus-human-diverse-core-v1",
-        "data/ready/human-core-v1/",
-        "data/raw/ready-core-v1/"
-      ],
-      "shared_export_dataset_id": "wikitext2_raw",
-      "license": "CC-BY-SA/GFDL; pinned card header 3.0 vs body 4.0 discrepancy",
-      "license_status": "license_version_discrepancy_requires_reconciliation",
-      "evidence_urls": [
-        "https://huggingface.co/datasets/Salesforce/wikitext",
-        "https://arxiv.org/abs/1609.07843"
-      ],
-      "notes": [
-        "Individual dataset/title IDs, authors, URLs and raw-file hashes retained.",
-        "Corpora contain human-origin candidates; no measured authorship guarantee.",
-        "Source metadata/AI catalog summaries are excluded from training text."
-      ],
-      "license_evidence_files": [
-        "data/raw/diverse-human/source-evidence.txt",
-        "data/raw/diverse-human/wikitext-card.md"
-      ],
-      "evidence_sha256": {
-        "data/raw/diverse-human/source-evidence.txt": "5e1cfe859dd906fea65c351ea3353553d8c22911cf3275d7ed7f08c9fdf33c8c",
-        "data/raw/diverse-human/wikitext-card.md": "d5aabf145d341366745ac703b5844c442c143943b6c77929481395c822b1c28c"
-      },
-      "portable_selection_recipe": "releases/human-core-v1/recipe.json"
-    },
-    {
-      "id": "gutenberg_selected",
-      "name": "11 selected historical original-English works",
-      "acquisition_status": "downloaded_verified",
-      "raw_paths": [
-        "data/raw/diverse-human"
-      ],
-      "shared_raw_selector": "acquisition.json files[].dataset == gutenberg_selected",
-      "text_exports": [
-        "data/corpus-human-diverse-v1",
-        "data/corpus-human-diverse-core-v1",
-        "data/ready/human-core-v1/",
-        "data/raw/ready-core-v1/"
-      ],
-      "shared_export_dataset_id": "gutenberg_selected",
-      "license": "Public domain in USA declared; Project Gutenberg license/trademark terms and other jurisdictions need separate assessment",
-      "license_status": "source_declaration_not_global_rights_certificate",
-      "evidence_urls": [
-        "https://www.gutenberg.org/policy/license.html"
-      ],
-      "notes": [
-        "Individual dataset/title IDs, authors, URLs and raw-file hashes retained.",
-        "Corpora contain human-origin candidates; no measured authorship guarantee.",
-        "Source metadata/AI catalog summaries are excluded from training text."
-      ],
-      "license_evidence_files": [
-        "data/raw/diverse-human/source-evidence.txt"
-      ],
-      "evidence_sha256": {
-        "data/raw/diverse-human/source-evidence.txt": "5e1cfe859dd906fea65c351ea3353553d8c22911cf3275d7ed7f08c9fdf33c8c"
-      },
-      "portable_selection_recipe": "releases/human-core-v1/recipe.json"
+      ]
     }
   ],
-  "removal_tracking": "Raw paths may be shared: select raw files by acquisition metadata dataset ID. Removing a source requires rebuilding all listed derived exports and models, including parent-document and audit exports. Dataset IDs, parent IDs and input hashes trace retained text.",
-  "derived_deletion_note": "Removing a dataset requires rebuilding affected shared exports and models, not only deleting raw downloads; dataset IDs and input hashes trace derived records.",
-  "portable_core_note": "The frozen portable recipe and source offsets are in Git; corpus text stays in ignored data/. Rebuild/remove data/ready/human-core-v1 and its shared source cache when excluding any core source. Frozen snapshots retain original inventory history."
+  "removal_tracking": "Raw sources are stored separately by dataset. News has no text exports yet. Existing pilot exports mix datasets: removing a source later requires rebuilding those exports and span/binary exports, using shared_export_dataset_id and equivalent_record_ids, then refreshing manifests/splits. Deleting raw files alone does not remove derived text.",
+  "derived_deletion_note": "Removing a dataset requires rebuilding affected shared exports and models, not only deleting raw downloads; dataset IDs and input hashes trace derived records."
 }

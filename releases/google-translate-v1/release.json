@@ -1,0 +1,8 @@
+{
+  "release": "google-translate-v1",
+  "files": {
+    "selection.json": "80c2aa00254f712c6545bb7fca4ad025174aa58b6092393e30917e23e52cb1af",
+    "licenses.snapshot.json": "738c011108f54fc7408c6b337098c1e5ebe4a746779bf568671bacc73a256ae3",
+    "source.json": "2b7b73ffc14f51041f9a11e90dbff28d8a1ccae03c794e992025859940eea7e8"
+  }
+}

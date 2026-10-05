@@ -67,7 +67,15 @@ Record metadata includes `id`, `parent_document_id`, `split`, `split_group`, `da
 
 ## Other available collections
 
-These collections exist in the original workspace; the GitHub quickstart does not prepare them. Their acquisition and reproduction commands are documented in the README.
+The translation controls have a separate portable setup:
+
+```bash
+uv run --frozen python prepare_translations.py
+```
+
+This downloads the pinned 285 MB official Par3 archive and prepares `data/ready/google-translate-v1/binary_examples.jsonl` (plain UTF-8 JSON Lines). Use `text` as English input, `binary_target` as the label (1 machine, 0 human), and the saved `split`. Train/validation/test contain 3,058 / 208 / 61 examples. `records.jsonl` is an overlapping provenance export, not extra examples. Rerunning verifies the prepared export; `--verify-only` checks it without downloads. The code verifies native paragraph identity and disables executable pickle construction. See the [frozen selection](releases/google-translate-v1/README.md).
+
+The legacy collections below exist in the original workspace; neither portable setup prepares these legacy directories. Their acquisition and reproduction commands are documented in the README.
 
 | Directory | Size | Purpose |
 | --- | --- | --- |
@@ -78,7 +86,7 @@ These collections exist in the original workspace; the GitHub quickstart does no
 
 Choose one pretraining export. These releases share text: do not concatenate them to increase apparent unique volume. Preserve existing split groups. If combining with other data, check overlap and regroup before partitioning. Source dates describe different things by dataset; do not interpret every date field as the date of the captured wording.
 
-For Par3 detector experiments, load `data/detector-par3-v2/binary_examples.jsonl` as plain UTF-8 JSON Lines and respect each record's `split`. Its 1,055 Google Translate outputs have `binary_target=1`; its 2,272 human translations have `binary_target=0`. The English input is `text`, not `source_text`. `records.jsonl` is an overlapping provenance export, not extra examples. Do not concatenate adjacent paragraphs: release order is shuffled. Human translations are valid negatives under this project's definition.
+The portable translation controls reproduce the legacy Par3 selection: 1,055 Google Translate outputs and 2,272 human translations. The English input is `text`, not `source_text`. Do not concatenate adjacent paragraphs: release order is shuffled. Human translations are valid negatives under this project's definition. Keep all these controls outside the pretraining inputs.
 
 The frozen model in `data/detector-v1/` falsely flagged 71.3% of Par3 human translations. **Do not use it for corpus removal.** These literary controls do not establish filtering performance on general English or corpus contamination. Generator versions, generation dates and individual translation rights remain unverified.
 

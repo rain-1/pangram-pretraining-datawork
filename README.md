@@ -24,6 +24,22 @@ Human origin remains a provenance inference, and some licence questions remain u
 
 The quickstart was tested in a fresh checkout with no local data: every upstream pin matched, all selected text and partitions matched the original core, and all 61 project tests passed. Run the tests with `uv run --frozen python -m unittest discover -s tests`.
 
+## Prepare the Google Translate controls
+
+In the same checkout, run this separate command:
+
+```bash
+uv run --frozen python prepare_translations.py
+```
+
+It downloads the pinned official Par3 archive (285 MB), extracts the exact **1,055 Google Translate outputs and 2,272 human translations**, and verifies selected English text, foreign source paragraphs, process labels and work-level splits against the [frozen control selection](releases/google-translate-v1/README.md). Outputs are in **`data/ready/google-translate-v1/`**. Use `binary_examples.jsonl`, reading `text` as the English input and `binary_target` as the label: **1 = machine translation, 0 = human translation**. Respect each record's `split`; train/validation/test contain 3,058 / 208 / 61 examples. Every paragraph is 400–3,000 words, and no unrelated release rows are joined.
+
+Rerunning verifies the export without downloading or extracting again. The archive is cached at `data/raw/par3/par3.pkl`; `--offline`, `--verify-only`, `--cache` and `--output` work like the core setup. The repository contains control IDs, hashes, source configuration and licence records, not translated prose. Internet access and continuing availability of the official download are required for a first setup. The archive is parsed with callable/global pickle construction disabled; its pinned checksum is verified before parsing.
+
+These are detector research controls, **not pretraining inputs**. Human translations are eligible human negatives. Individual literary translation rights, Google engine versions and generation dates remain unverified. The existing experimental detector is not prepared by this command and should not drive corpus removal: it falsely flags 71.3% of these human translations.
+
+Translation setup was tested in a fresh checkout with no archive: the official download matched its pin, every control and partition matched the original selection, and all 66 project tests passed.
+
 **The current v2 corpus contains 52,186 contiguous passages of 400–3,000 whitespace words, totalling 45,507,097 words.** It uses the downloaded news and Hansard, with source-specific footer cleanup and verified near-copy removal. The v1 artifacts remain preserved. Separate Par3 controls now supply 1,055 long Google Translate outputs and 2,272 human translations. The frozen experimental detector fails badly on those human controls and is excluded from corpus removal. These are pretraining candidates; no human-only guarantee or corpus contamination estimate has been measured. NEWSROOM files remain pending, and no paid Gigaword files are needed for this version.
 
 ## Diverse human-origin core
