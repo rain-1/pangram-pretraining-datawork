@@ -1,0 +1,189 @@
+{
+  "datasets": [
+    {
+      "name": "common_pile_news",
+      "repo": "common-pile/news",
+      "revision": "13e76bdc8d49ed14d710fac7e3b61186cf74c8d3",
+      "card_url": "https://huggingface.co/datasets/common-pile/news/raw/13e76bdc8d49ed14d710fac7e3b61186cf74c8d3/README.md",
+      "files": [
+        {
+          "remote_path": "v0/documents/00000_360info.jsonl.gz",
+          "local_path": "common_pile_news/00000_360info.jsonl.gz",
+          "bytes": 3088904,
+          "sha256": "6b2f94dd7f79fb72c9765067f6c96549d7e43fe2bc42329ca1fabbe38a78a78c",
+          "url": "https://huggingface.co/datasets/common-pile/news/resolve/13e76bdc8d49ed14d710fac7e3b61186cf74c8d3/v0/documents/00000_360info.jsonl.gz"
+        },
+        {
+          "remote_path": "v0/documents/00000_altnews.jsonl.gz",
+          "local_path": "common_pile_news/00000_altnews.jsonl.gz",
+          "bytes": 6856315,
+          "sha256": "9444b1b222e7e74a37eba04058f770d01802e29ed445b42bc5c44cb242909fba",
+          "url": "https://huggingface.co/datasets/common-pile/news/resolve/13e76bdc8d49ed14d710fac7e3b61186cf74c8d3/v0/documents/00000_altnews.jsonl.gz"
+        },
+        {
+          "remote_path": "v0/documents/00000_balkandiskurs.jsonl.gz",
+          "local_path": "common_pile_news/00000_balkandiskurs.jsonl.gz",
+          "bytes": 3147335,
+          "sha256": "d0f7376037deb4ca1674cf21b3d1472b29f51428d4f2050f14195e0b0efbb176",
+          "url": "https://huggingface.co/datasets/common-pile/news/resolve/13e76bdc8d49ed14d710fac7e3b61186cf74c8d3/v0/documents/00000_balkandiskurs.jsonl.gz"
+        },
+        {
+          "remote_path": "v0/documents/00000_educeleb.jsonl.gz",
+          "local_path": "common_pile_news/00000_educeleb.jsonl.gz",
+          "bytes": 4985720,
+          "sha256": "0932b921c454c307b098bc4bc92c9c45913bb15e338f8aafeeb771082ef68b0b",
+          "url": "https://huggingface.co/datasets/common-pile/news/resolve/13e76bdc8d49ed14d710fac7e3b61186cf74c8d3/v0/documents/00000_educeleb.jsonl.gz"
+        },
+        {
+          "remote_path": "v0/documents/00000_factly.jsonl.gz",
+          "local_path": "common_pile_news/00000_factly.jsonl.gz",
+          "bytes": 12797633,
+          "sha256": "01cf0c0129b2ff99ab4ea778b56d5f1d72ddb6e124f687b4431c0a54690aff7c",
+          "url": "https://huggingface.co/datasets/common-pile/news/resolve/13e76bdc8d49ed14d710fac7e3b61186cf74c8d3/v0/documents/00000_factly.jsonl.gz"
+        },
+        {
+          "remote_path": "v0/documents/00000_freedom.jsonl.gz",
+          "local_path": "common_pile_news/00000_freedom.jsonl.gz",
+          "bytes": 1465956,
+          "sha256": "d05be7256830eef3dded07d1ce393130e0532c4ba434edd892af22f98632a9b4",
+          "url": "https://huggingface.co/datasets/common-pile/news/resolve/13e76bdc8d49ed14d710fac7e3b61186cf74c8d3/v0/documents/00000_freedom.jsonl.gz"
+        },
+        {
+          "remote_path": "v0/documents/00000_globalvoices.jsonl.gz",
+          "local_path": "common_pile_news/00000_globalvoices.jsonl.gz",
+          "bytes": 94777893,
+          "sha256": "466ee4e91c531a550b5f1edcd25848003ddc7a05b800cd7cafc188b588c05a7f",
+          "url": "https://huggingface.co/datasets/common-pile/news/resolve/13e76bdc8d49ed14d710fac7e3b61186cf74c8d3/v0/documents/00000_globalvoices.jsonl.gz"
+        },
+        {
+          "remote_path": "v0/documents/00000_libertytvradio.jsonl.gz",
+          "local_path": "common_pile_news/00000_libertytvradio.jsonl.gz",
+          "bytes": 4083233,
+          "sha256": "7b791dc5e1ff19e33b62eb73d56a1da32dc0ebe15e81a48b5f174f4a920a0f99",
+          "url": "https://huggingface.co/datasets/common-pile/news/resolve/13e76bdc8d49ed14d710fac7e3b61186cf74c8d3/v0/documents/00000_libertytvradio.jsonl.gz"
+        },
+        {
+          "remote_path": "v0/documents/00000_mekongeye.jsonl.gz",
+          "local_path": "common_pile_news/00000_mekongeye.jsonl.gz",
+          "bytes": 1048731,
+          "sha256": "d0954d7b845848560bd21c3e8aad748334b6e1f10a2cce336a28244880364595",
+          "url": "https://huggingface.co/datasets/common-pile/news/resolve/13e76bdc8d49ed14d710fac7e3b61186cf74c8d3/v0/documents/00000_mekongeye.jsonl.gz"
+        },
+        {
+          "remote_path": "v0/documents/00000_milwaukeenns.jsonl.gz",
+          "local_path": "common_pile_news/00000_milwaukeenns.jsonl.gz",
+          "bytes": 10722059,
+          "sha256": "7fb59cfd27f53d440b46ce7d1cd2e317fe8089a8119681a5479d5f71ab237e7b",
+          "url": "https://huggingface.co/datasets/common-pile/news/resolve/13e76bdc8d49ed14d710fac7e3b61186cf74c8d3/v0/documents/00000_milwaukeenns.jsonl.gz"
+        },
+        {
+          "remote_path": "v0/documents/00000_minorityafrica.jsonl.gz",
+          "local_path": "common_pile_news/00000_minorityafrica.jsonl.gz",
+          "bytes": 498189,
+          "sha256": "7d1543a07b220a1cb76f8b37007e8ec49214193ea4c4187a4d2069dba7070da4",
+          "url": "https://huggingface.co/datasets/common-pile/news/resolve/13e76bdc8d49ed14d710fac7e3b61186cf74c8d3/v0/documents/00000_minorityafrica.jsonl.gz"
+        },
+        {
+          "remote_path": "v0/documents/00000_newcanadianmedia.jsonl.gz",
+          "local_path": "common_pile_news/00000_newcanadianmedia.jsonl.gz",
+          "bytes": 6823765,
+          "sha256": "87442c2e2f783358dc61b6383e4a503077abaf3a8d604a0f04fd596f215cf81a",
+          "url": "https://huggingface.co/datasets/common-pile/news/resolve/13e76bdc8d49ed14d710fac7e3b61186cf74c8d3/v0/documents/00000_newcanadianmedia.jsonl.gz"
+        },
+        {
+          "remote_path": "v0/documents/00000_oxpeckers.jsonl.gz",
+          "local_path": "common_pile_news/00000_oxpeckers.jsonl.gz",
+          "bytes": 1232857,
+          "sha256": "6676e6a46bb09c8534c761ed33231f3ebfe5d5cd40ba6908bdc18d306cedb3a0",
+          "url": "https://huggingface.co/datasets/common-pile/news/resolve/13e76bdc8d49ed14d710fac7e3b61186cf74c8d3/v0/documents/00000_oxpeckers.jsonl.gz"
+        },
+        {
+          "remote_path": "v0/documents/00000_propastop.jsonl.gz",
+          "local_path": "common_pile_news/00000_propastop.jsonl.gz",
+          "bytes": 1417430,
+          "sha256": "d33975bccd612d30668b982b887d80ac1943f94bfa5c58baed2e98493f17587b",
+          "url": "https://huggingface.co/datasets/common-pile/news/resolve/13e76bdc8d49ed14d710fac7e3b61186cf74c8d3/v0/documents/00000_propastop.jsonl.gz"
+        },
+        {
+          "remote_path": "v0/documents/00000_solutionsjournalism.jsonl.gz",
+          "local_path": "common_pile_news/00000_solutionsjournalism.jsonl.gz",
+          "bytes": 1106,
+          "sha256": "0c669401064452d31c7d846056f68b7ce0081989b11c65cfba3a84b593be5b8e",
+          "url": "https://huggingface.co/datasets/common-pile/news/resolve/13e76bdc8d49ed14d710fac7e3b61186cf74c8d3/v0/documents/00000_solutionsjournalism.jsonl.gz"
+        },
+        {
+          "remote_path": "v0/documents/00000_thepublicrecord.jsonl.gz",
+          "local_path": "common_pile_news/00000_thepublicrecord.jsonl.gz",
+          "bytes": 1669173,
+          "sha256": "1d3ddacb2c14e4e6b5309dec1719e67721bbce828e680cfa842a177e816e82b3",
+          "url": "https://huggingface.co/datasets/common-pile/news/resolve/13e76bdc8d49ed14d710fac7e3b61186cf74c8d3/v0/documents/00000_thepublicrecord.jsonl.gz"
+        },
+        {
+          "remote_path": "v0/documents/00000_zimfact.jsonl.gz",
+          "local_path": "common_pile_news/00000_zimfact.jsonl.gz",
+          "bytes": 539880,
+          "sha256": "56497ba76fc483f44181cfb3192a165be7daaa72b2bb27b0c2edba45d260663a",
+          "url": "https://huggingface.co/datasets/common-pile/news/resolve/13e76bdc8d49ed14d710fac7e3b61186cf74c8d3/v0/documents/00000_zimfact.jsonl.gz"
+        }
+      ]
+    },
+    {
+      "name": "cc_news",
+      "repo": "vblagoje/cc_news",
+      "revision": "81eb2ce0d2a9dad6ad16b68ef750ec290880fa36",
+      "card_url": "https://huggingface.co/datasets/vblagoje/cc_news/raw/81eb2ce0d2a9dad6ad16b68ef750ec290880fa36/README.md",
+      "files": [
+        {
+          "remote_path": "plain_text/train-00000-of-00005.parquet",
+          "local_path": "cc_news/train-00000-of-00005.parquet",
+          "bytes": 211044294,
+          "sha256": "5cda9a2b0b40a9c9438ae02168b16beb61e52449a895869515501962c5aeb977",
+          "url": "https://huggingface.co/datasets/vblagoje/cc_news/resolve/81eb2ce0d2a9dad6ad16b68ef750ec290880fa36/plain_text/train-00000-of-00005.parquet"
+        },
+        {
+          "remote_path": "plain_text/train-00001-of-00005.parquet",
+          "local_path": "cc_news/train-00001-of-00005.parquet",
+          "bytes": 233804414,
+          "sha256": "1d33583fdd82fa28a7aa961a633aeb63be90fdac8f47c1893daf630c9a5f074a",
+          "url": "https://huggingface.co/datasets/vblagoje/cc_news/resolve/81eb2ce0d2a9dad6ad16b68ef750ec290880fa36/plain_text/train-00001-of-00005.parquet"
+        },
+        {
+          "remote_path": "plain_text/train-00002-of-00005.parquet",
+          "local_path": "cc_news/train-00002-of-00005.parquet",
+          "bytes": 218914067,
+          "sha256": "78d59696b61fa9789879836a303c7a04beb52107c6678a444b98ce4e8b97b1ae",
+          "url": "https://huggingface.co/datasets/vblagoje/cc_news/resolve/81eb2ce0d2a9dad6ad16b68ef750ec290880fa36/plain_text/train-00002-of-00005.parquet"
+        },
+        {
+          "remote_path": "plain_text/train-00003-of-00005.parquet",
+          "local_path": "cc_news/train-00003-of-00005.parquet",
+          "bytes": 244540595,
+          "sha256": "53b35fa4b5d82a0308ddaba3d55033c49a1f1d4cca45d88d2633495cab4767db",
+          "url": "https://huggingface.co/datasets/vblagoje/cc_news/resolve/81eb2ce0d2a9dad6ad16b68ef750ec290880fa36/plain_text/train-00003-of-00005.parquet"
+        },
+        {
+          "remote_path": "plain_text/train-00004-of-00005.parquet",
+          "local_path": "cc_news/train-00004-of-00005.parquet",
+          "bytes": 214502216,
+          "sha256": "e0869a42852439aa408030de51464d0a8cbe5608ff1a7ba9d165e10964c6fdef",
+          "url": "https://huggingface.co/datasets/vblagoje/cc_news/resolve/81eb2ce0d2a9dad6ad16b68ef750ec290880fa36/plain_text/train-00004-of-00005.parquet"
+        }
+      ]
+    }
+  ],
+  "access_required": [
+    {
+      "name": "newsroom",
+      "download_instructions": "https://lil.nlp.cornell.edu/newsroom/download/index.html",
+      "terms": "https://lil.nlp.cornell.edu/newsroom/terms/index.html",
+      "status": "awaiting_project_use_confirmation_and_agreement"
+    },
+    {
+      "name": "reuters",
+      "download_instructions": "https://trec.nist.gov/data/reuters/reuters.html",
+      "organizational_agreement": "https://trec.nist.gov/data/reuters/org_appl_reuters_v4.html",
+      "individual_agreement": "https://trec.nist.gov/data/reuters/ind_appl_reuters_v4.html",
+      "status": "organizational_agreement_and_access_approval_required"
+    }
+  ]
+}

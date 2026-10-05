@@ -1,0 +1,13 @@
+[project]
+name = "pretraining-datawork"
+version = "0.1.0"
+description = "Provenance-preserving human corpus and machine translation data pilot"
+requires-python = ">=3.11"
+dependencies = [
+    "datasketch==2.0.0",
+    "lingua-language-detector==2.1.1",
+    "openpyxl==3.1.5",
+    "pyarrow==25.0.1",
+    "scikit-learn==1.8.0",
+    "tokenizers==0.22.2",
+]

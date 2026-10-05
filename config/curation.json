@@ -1,0 +1,43 @@
+{
+  "publication_cutoff": "2021-12-31",
+  "minimum_words": 400,
+  "maximum_span_words": 3000,
+  "english_confidence_minimum": 0.8,
+  "language_samples": "First, middle and last 1800 characters; all must pass",
+  "split_seed": "news-curation-v1",
+  "cc_news_publishers": [
+    "apnews.com", "bbc.co.uk", "bbc.com", "theguardian.com", "reuters.com",
+    "cnn.com", "nytimes.com", "washingtonpost.com", "npr.org", "cbc.ca",
+    "abc.net.au", "theconversation.com", "propublica.org", "channelnewsasia.com",
+    "ft.com", "economist.com", "nature.com", "sciencemag.org"
+  ],
+  "common_pile_source_hosts": {
+    "news-360info": "360info.org",
+    "news-altnews": "altnews.in",
+    "news-balkandiskurs": "balkandiskurs.com",
+    "news-educeleb": "educeleb.com",
+    "news-factly": "factly.in",
+    "news-freedom": "freedom.press",
+    "news-globalvoices": "globalvoices.org",
+    "news-libertytvradio": "libertytvradio.com",
+    "news-mekongeye": "mekongeye.com",
+    "news-milwaukeenns": "milwaukeenns.org",
+    "news-minorityafrica": "minorityafrica.org",
+    "news-newcanadianmedia": "newcanadianmedia.ca",
+    "news-oxpeckers": "oxpeckers.org",
+    "news-propastop": "propastop.org",
+    "news-thepublicrecord": "thepublicrecord.ca",
+    "news-zimfact": "zimfact.org"
+  },
+  "date_from_daily_url_sources": [
+    "news-globalvoices", "news-balkandiskurs", "news-mekongeye",
+    "news-milwaukeenns", "news-propastop", "news-thepublicrecord"
+  ],
+  "review_sample_per_publisher": 8,
+  "notes": [
+    "Publisher selection is a curation choice, not a human-authorship certificate.",
+    "Unknown licenses and captured-version dates remain explicit.",
+    "Human translations are eligible; only explicit MT notices are quarantined.",
+    "All qualifying current inputs are inventoried using whitespace word counts; no overall budget assumed."
+  ]
+}

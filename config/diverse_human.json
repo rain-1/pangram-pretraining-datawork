@@ -1,0 +1,55 @@
+{
+  "minimum_words": 400,
+  "maximum_words": 3000,
+  "seed": "diverse-human-v1",
+  "genre_weights": {
+    "reference": 0.3,
+    "fiction": 0.2,
+    "nonfiction": 0.15,
+    "journalism": 0.25,
+    "parliament": 0.1
+  },
+  "news_publication_cutoff": "2018-12-31",
+  "news_known_update_cutoff": "2018-12-31",
+  "publisher_maximum_total_fraction": 0.08,
+  "author_maximum_total_fraction": 0.12,
+  "document_maximum_total_fraction": 0.02,
+  "common_pile_publishers": [
+    "globalvoices.org",
+    "milwaukeenns.org",
+    "freedom.press",
+    "newcanadianmedia.ca",
+    "educeleb.com"
+  ],
+  "cc_publishers": [
+    "reuters.com",
+    "bbc.com",
+    "bbc.co.uk",
+    "cnn.com",
+    "cbc.ca",
+    "npr.org",
+    "abc.net.au",
+    "theguardian.com",
+    "washingtonpost.com",
+    "nytimes.com",
+    "channelnewsasia.com",
+    "theconversation.com",
+    "propublica.org"
+  ],
+  "minimum_alphabetic_token_fraction": 0.75,
+  "maximum_digit_token_fraction": 0.1,
+  "maximum_numeric_line_fraction": 0.2,
+  "notes": [
+    "Whole-book and parent-article groups stay together; inherited source partitions are retained.",
+    "Target size derives from the limiting genre capacity; no requested total word cap and no repetition.",
+    "Keep named-author/byline web journalism separate in confidence basis from historical literary works and frozen Wikipedia.",
+    "All retained authorship labels are candidates, with no measured human-only guarantee or contamination rate.",
+    "Mechanical WikiText punctuation restoration is deterministic and recorded; no learned rewriting or generated summaries.",
+    "Gutenberg catalog summaries and reading guides are explicitly excluded; only text inside ebook body markers is eligible.",
+    "Legacy WikiText tokenizer spacing may remain; benchmark formatting is a potential detector shortcut.",
+    "Book acquisition dates and ebook update dates differ from original publication dates.",
+    "Do not combine this overlapping mixture with corpus-words-v2 or human-core-v1 as additional unique training text.",
+    "News article captured-version uncertainty and license discrepancies remain explicit.",
+    "Source and author limits increase diversity but do not establish topic, author or generator independence."
+  ]
+}

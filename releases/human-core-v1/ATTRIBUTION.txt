@@ -1,0 +1,4 @@
+Contains Parliamentary information licensed under the Open Parliament Licence v3.0.
+Wikipedia contributors via WikiText-2; per-article source URLs retained; CC BY-SA/GFDL version discrepancy recorded.
+Project Gutenberg titles/authors/source URLs retained; ebook license and trademark terms are in raw files.
+News source URLs/bylines and original license fields retained; unknown/disputed rights remain in inventory.

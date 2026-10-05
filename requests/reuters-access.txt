@@ -1,0 +1,42 @@
+REUTERS ACCESS REQUEST — EXCLUDED AT USER REQUEST; NOT SUBMITTED
+
+The user chose to skip this source because of the organizational paperwork.
+The instructions below are retained only as reference, outside the current plan.
+
+Official instructions:
+https://trec.nist.gov/data/reuters/reuters.html
+
+Organizational agreement:
+https://trec.nist.gov/data/reuters/org_appl_reuters_v4.html
+
+Individual agreement:
+https://trec.nist.gov/data/reuters/ind_appl_reuters_v4.html
+
+Requested collections: TRC2 and RCV1, original full article text.
+TRC2 contains 1,800,370 stories from 2008–2009. RCV1 contains approximately
+810,000 stories from 1996–1997. RCV1-v2 sparse feature matrices do not supply
+the original article prose needed for this project.
+
+NIST requires a signed organizational agreement submitted by the person
+responsible for the data; each researcher must also complete an individual
+agreement retained by the organization. NIST approves access and sends the
+download credentials. The official page asks to allow seven business days.
+No signature, agreement acceptance or request submission has been made.
+
+Information/signatures to supply:
+- Full name, complete postal address and organization details.
+- Authorized organizational signatory and signed organizational agreement.
+- Individual agreements for each researcher, retained by the organization.
+- Confirmation the intended use fits the research agreement.
+
+Prepared email — replace bracketed fields; attach signed organizational form:
+
+To: [NIST recipient listed on the official distribution page]
+Subject: request for Reuters corpus
+
+Name: [Full name]
+Complete postal address: [Full postal address]
+Requested corpora: TRC2 and RCV1
+
+After approval, download through the supplied access route and provide the
+local directory. Preserve the original archive files and access terms.

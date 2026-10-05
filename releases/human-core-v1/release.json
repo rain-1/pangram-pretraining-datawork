@@ -1,0 +1,8 @@
+{
+  "release": "human-core-v1",
+  "files": {
+    "recipe.json": "2549f6bbfde2597d544af152739db8f6f18e3619b0f511ef15eea16e9f92cec0",
+    "licenses.snapshot.json": "721f4c164e6a09a11b78fc53ff20dbe3c6b0340894d74357c5c97265ed34f3c4",
+    "ATTRIBUTION.txt": "1c93916398715525a7468b5c73e5b20205e51dd6cd2a27b385cb9e6aa5364dba"
+  }
+}

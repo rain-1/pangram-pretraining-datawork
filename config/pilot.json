@@ -1,0 +1,23 @@
+{
+  "cutoff_year": 2021,
+  "hansard_scan_rows": 500,
+  "downloads": {
+    "wmt21_zhen.tsv": {
+      "url": "https://raw.githubusercontent.com/google/wmt-mqm-human-evaluation/29acd6999aaea3586378c9dcb58d8cc4820cede3/newstest2021/zhen/mqm_newstest2021_zhen.tsv",
+      "sha256": "78c79128752881f5ce2b6256a04e4412eafd843c4ea6a583423b00facc1f68bd"
+    },
+    "collaborative.zip": {
+      "url": "https://storage.googleapis.com/gresearch/collaborative-tr-collection/tr-collection-release.zip",
+      "sha256": "f990cf9938dcaef1d96f3b027ca43f6fbdaf75205b4a79328aac4e71e74312a8"
+    },
+    "mwe.xlsx": {
+      "url": "https://zenodo.org/api/records/18351134/files/MonTi%20paper%20-%20Dataset.xlsx/content",
+      "sha256": "adf9708a71c31dba3f2b55c76abdef3c304a29a71a7c7978e43eb3500b07bef3"
+    }
+  },
+  "hansard": {
+    "revision": "05eeb43c6518f0eedbe1594d9683a100aedbce89",
+    "url": "https://huggingface.co/datasets/common-pile/uk_hansard/resolve/05eeb43c6518f0eedbe1594d9683a100aedbce89/uk_hansard/00000_ukhansard.jsonl.gz",
+    "sampling": "First 500 rows of first shard; convenience pilot, not a representative audit"
+  }
+}

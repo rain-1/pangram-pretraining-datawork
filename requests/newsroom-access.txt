@@ -1,0 +1,33 @@
+NEWSROOM ACCESS REQUEST — USER REPORTS FORM COMPLETED; DOWNLOAD PENDING
+
+Download instructions:
+https://lil.nlp.cornell.edu/newsroom/download/index.html
+
+Request form linked by the official project:
+https://forms.gle/kDWiLuGcYj374Lzf6
+
+Usage agreement:
+https://lil.nlp.cornell.edu/newsroom/terms/index.html
+
+The official terms limit use to non-commercial research and education.
+The user confirmed this project fits non-commercial use and reports completing
+the access form personally. No request was submitted by the agent.
+The site says a download link is sent by email after
+the form is completed and the license is agreed to.
+
+Information to supply:
+- Researcher's name and email address.
+- Organization/affiliation, if requested by the form.
+- Confirmation that the actual project qualifies under the usage terms.
+- Any other fields shown by the current form.
+
+Prepared project description (edit as needed):
+Research on selecting human-origin English pretraining text using source
+provenance and captured-version dates, and on recognizing machine-translated
+text. We need original full article bodies and their archival metadata to
+construct and audit coherent, fairly large passages.
+
+After access is granted, retain the original compressed JSONL files and
+provide their local directory to the corpus pipeline. Use the full `text`
+field; `summary` is a separate field. Keep the archive URL and capture date.
+Authorship and version checks remain necessary.

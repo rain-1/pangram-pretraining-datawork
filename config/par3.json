@@ -1,0 +1,30 @@
+{
+  "repo": "katherinethai/par3",
+  "revision": "04ca269d2e46098eaad0cdca34c10b8580f1c047",
+  "official_folder_url": "https://drive.google.com/drive/folders/1t7Cd_cRC4utDG3ngpX3YapXZvs-rCr64",
+  "file_id": "13spkYav5EMV_7Rzen-XNxN0f2zYZmZVk",
+  "download_url": "https://drive.usercontent.google.com/download?id=13spkYav5EMV_7Rzen-XNxN0f2zYZmZVk&export=download&confirm=t",
+  "bytes": 285335827,
+  "sha256": "913783fe1bccb57f101feb61666cf20d762348ec9b8b28bca59ce95b19ece6e8",
+  "checksum_policy": "First acquisition pins observed bytes/hash; no upstream cryptographic checksum supplied",
+  "repository_license": "MIT (software and associated documentation)",
+  "dataset_rights": "Individual source novels and English translation rights not independently established",
+  "minimum_words": 400,
+  "maximum_words": 3000,
+  "split_seed": "par3-work-groups-v2",
+  "split_policy": "Rank connected work groups by a fixed hash; reserve ceil(10%) each for validation and test",
+  "work_group_patterns": {
+    "^les_miserables_[123]_fr$": "les_miserables_fr",
+    "^war_and_peace_[123]_ru$": "war_and_peace_ru",
+    "^romance_of_the_three_kingdoms_[12]_zh$": "romance_of_the_three_kingdoms_zh",
+    "^the_count_of_monte_cristo_[123]_fr$": "the_count_of_monte_cristo_fr",
+    "^the_good_soldier_schweik_[123]_[a-z_]+_cs$": "the_good_soldier_schweik_cs",
+    "^kristin_lavransdatter_[123]_[a-z_]+_no$": "kristin_lavransdatter_no"
+  },
+  "generation_date": null,
+  "notes": [
+    "Official public release; original paragraph order shuffled and at most 50% of any human translation retained.",
+    "Never concatenate adjacent release paragraphs.",
+    "Translation detector research only; not a pretraining corpus input."
+  ]
+}

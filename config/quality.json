@@ -1,0 +1,44 @@
+{
+  "minimum_words": 400,
+  "maximum_span_words": 3000,
+  "shingle_words": 7,
+  "minhash_permutations": 128,
+  "minhash_seed": 42,
+  "minhash_scheme": "affine64",
+  "lsh_bands": 16,
+  "lsh_rows": 8,
+  "group_jaccard_minimum": 0.8,
+  "dedup_jaccard_minimum": 0.92,
+  "dedup_word_ratio_minimum": 0.85,
+  "split_seed": "news-curation-v1",
+  "footer_minimum_document_fraction": 0.5,
+  "recurring_related_snippet_minimum_documents": 20,
+  "additional_allowed_footer_tail_lines": {
+    "minorityafrica.org": ["Editorial.", "Journalist at large."]
+  },
+  "footer_lines": {
+    "newcanadianmedia.ca": ["Your email address will not be published."],
+    "milwaukeenns.org": ["Do you have feedback on Milwaukee NNS's reporting? Take our survey to let us know how we're doing!"],
+    "freedom.press": [
+      "Threats to press freedom around the world are at an all-time high. Sign up to stay up to date and take action to protect journalists and whistleblowers everywhere.",
+      "Thanks for signing up for our newsletter. You are not yet subscribed! Please check your email for a message asking you to confirm your subscription."
+    ],
+    "factly.in": ["Did you watch our new video?"],
+    "minorityafrica.org": ["Features a roundup of fresh MA reports, announcements, events/workshop listings, and minority content curated from across the web."],
+    "altnews.in": [
+      "Pooja Chaudhuri is a senior editor at Alt News.",
+      "Co-Founder Alt News, I can be reached via E-mail at [email protected] and on Facebook at https://fb.com/freethinker.",
+      "Nobody's cheerleader, I tweet at @samjawed65",
+      "A journalist and a dilettante person who always strives to learn new skills and meeting new people. Either sketching or working.",
+      "🙏 Blessed to have worked as a fact-checking journalist from November 2019 to February 2023."
+    ]
+  },
+  "related_snippet_publishers": ["altnews.in"],
+  "notes": [
+    "Footer lines selected after inspecting source samples and recurring exact lines; never classify repetition as AI authorship.",
+    "Source-specific tail truncation preserves a single exact contiguous original character range.",
+    "MinHash only retrieves candidate pairs; grouping/deletion use Jaccard of actual normalized word-shingle sets.",
+    "Near-duplicate removal requires a direct confirmed edge to a retained article, not just transitive membership.",
+    "Every detected similarity group and exact span identity stays within one split; approximate retrieval can miss pairs."
+  ]
+}
