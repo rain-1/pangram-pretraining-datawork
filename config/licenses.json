@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-03T12:30:41.256399+00:00",
+  "updated_utc": "2026-10-06T15:41:22+00:00",
   "project_use": "User confirmed non-commercial research purpose for NEWSROOM.",
   "scope": "Dataset-specific source/license inventory; declared metadata is distinguished from independently reviewed rights.",
   "news_input_manifest": "data/news/acquisition.json",
@@ -430,6 +430,127 @@
         "data/raw/diverse-human/source-evidence.txt": "5e1cfe859dd906fea65c351ea3353553d8c22911cf3275d7ed7f08c9fdf33c8c"
       },
       "portable_selection_recipe": "releases/human-core-v1/recipe.json"
+    },
+    {
+      "id": "tweepfake",
+      "acquisition_status": "downloaded_verified",
+      "raw_paths": [
+        "data/raw/twitter/tweepfake-*"
+      ],
+      "text_exports": [
+        "data/ready/twitter-v1"
+      ],
+      "license": "unknown for tweet CSV text",
+      "license_status": "no_dataset_license_found_in_pinned_author_repository",
+      "evidence_urls": [
+        "https://github.com/tizfa/tweepfake_deepfake_text_detection",
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0251415"
+      ],
+      "notes": [
+        "The paper license does not establish licensing of tweet text. Creator and platform rights require review.",
+        "Human and generator labels are published account classifications, not independent per-post verification. Unknown-method bot text remains quarantined."
+      ],
+      "pinned_revision": "822f238bb3254a109e4ad969bebb2ab4b0b13f7d",
+      "source_hashes": {
+        "tweepfake-README.md": "ef0525ad8cb3b8e3b1f874c1adbfa5dfb949108496fa78eb4f7d5616bfb5abf0",
+        "tweepfake-test.csv": "57f27a0d48b83aeed787109cbef2bd1f41354b3c6cd5466048cdc98ea79761d5",
+        "tweepfake-train.csv": "db440d2131560e29df7e118b212f1140f46d060a416e824c0b97abad9f31b32b",
+        "tweepfake-validation.csv": "70abeee427611886338ad8fb07d202e2070bae318f1b57d0a19e78035c8bded7"
+      },
+      "intended_use": "twitter_detector_research_only",
+      "attribution": "TweepFake, Fagni et al. (2021), author repository and PLOS ONE paper linked in evidence_urls; original tweet creators retain their rights.",
+      "processing_notice": "This project preserves released text, excludes uncertain/conflicting labels, deduplicates identity groups and changes evaluation partitions; Grok import is local and optional."
+    },
+    {
+      "id": "unmasking",
+      "acquisition_status": "downloaded_verified",
+      "raw_paths": [
+        "data/raw/twitter/unmasking-*"
+      ],
+      "text_exports": [
+        "data/ready/twitter-v1"
+      ],
+      "license": "CC-BY-4.0 declared by dataset card",
+      "license_status": "dataset_declaration_underlying_TweetEval_tweet_rights_unverified",
+      "evidence_urls": [
+        "https://huggingface.co/datasets/redasers/Unmasking-the-Imposters",
+        "https://aclanthology.org/2025.coling-main.607/",
+        "https://github.com/cardiffnlp/tweeteval"
+      ],
+      "notes": [
+        "Preserve author attribution and generation variants. The dataset license is not an independent clearance of underlying TweetEval references or third-party quoted content.",
+        "Both the real references and generated outputs are distributed as processed text. Human references remain provisional; no human-only certification."
+      ],
+      "pinned_revision": "48d1eee50c389d12f49bb0af285a37dba4d23a6a",
+      "source_hashes": {
+        "unmasking-Hermes-2-Pro-Llama-3-8B--test.json": "b44d977f5c48fbdc801d450d52e65b865b7268cc546a5804b9f68301ca5e26e7",
+        "unmasking-Hermes-2-Pro-Llama-3-8B--train.json": "4daff85c8dbc05647cf89b3865fc0433072171d3ada5fe6510ada3e24e20bfbe",
+        "unmasking-Hermes-2-Pro-Llama-3-8B--val.json": "96e51e45f910bc3623e9221392268c7997afa63f99bb9357c2b8ceebc59716cd",
+        "unmasking-Meta-Llama-3-8B-Instruct--test.json": "207896b18d2e69ce2307f89ade474d4fdced47fd11676afe8c5621a5ef8fa880",
+        "unmasking-Meta-Llama-3-8B-Instruct--train.json": "54e283d0d5e2e1e07f38da77fa74278778577fa79e27dee695228a1237c18bc0",
+        "unmasking-Meta-Llama-3-8B-Instruct--val.json": "fe6c02d7f481191fab8f0969772801702d6e99398c79f495d745697aaec74f25",
+        "unmasking-Mistral-7B-Instruct-v0.2--test.json": "e892ee4a05abf5d2e3194a726a62987556d2233a243a3dbf1704584adadea0b4",
+        "unmasking-Mistral-7B-Instruct-v0.2--train.json": "d66612431b30b7d8e81f5c90f2ff475c7338c1eb5c79865b4fe8e27538ee6306",
+        "unmasking-Mistral-7B-Instruct-v0.2--val.json": "3cf04b02ec43a39c495c4f1689f9f36c62ea14879ab4f50485c00d417dcff704",
+        "unmasking-OpenHermes-2.5-Mistral-7B--test.json": "be73f25cd31c430d5a855c4a272440580ce9b15203431968af6e9375b9237bcb",
+        "unmasking-OpenHermes-2.5-Mistral-7B--train.json": "0677702a6de11a1c073840b7fec053b5c1d23bfde06561203922fd7f6639a5f4",
+        "unmasking-OpenHermes-2.5-Mistral-7B--val.json": "46535e2336d01de7ddcfe2e44263b9625d2a35416a42132f11efc986c95d0427",
+        "unmasking-Qwen2-7B-Instruct--test.json": "c8913e93e3cfb5dd264ee0127be79349a1e19fbe0f780c0834356f9d35090dc3",
+        "unmasking-Qwen2-7B-Instruct--train.json": "27616926946e80a3c78f51febfb44e36c02883f472e632583749000f4ad10545",
+        "unmasking-Qwen2-7B-Instruct--val.json": "898bc2ffe5bdf212aecb12bb99f3f347c3d455c07cbdbac8ff45efd80d56d8b2",
+        "unmasking-README.md": "713d29648063717389ab1d91fc112fa030cb3b7c0c52cdc90f943a312c6aa741",
+        "unmasking-dolphin-2.8-mistral-7b-v02--test.json": "ea7703b41885e87ef2f6304cbd21a7a702fc789aa91f581bcb6544ff5701ac1c",
+        "unmasking-dolphin-2.8-mistral-7b-v02--train.json": "3d213951557a8578bdad428442380d3abfebff4c12644ad01c3d79917825ec55",
+        "unmasking-dolphin-2.8-mistral-7b-v02--val.json": "4b580463c50a9eb5010a0cd0fca9a2e45963827614f36d969fa76edf0e0d30d6",
+        "unmasking-dolphin-2.9-llama3-8b--test.json": "df6f271a32e6ad9289d77667a63f8c402fcb5b4d335e325bf8672a9901a752b3",
+        "unmasking-dolphin-2.9-llama3-8b--train.json": "ca46ca38c6fba3b94bfc535b91f8f8b6c6b8ba90abd3a3f04a936e9386ff3c17",
+        "unmasking-dolphin-2.9-llama3-8b--val.json": "f3e70511a3ebe6d782abcb633f396bfeaa49476fe7afa459befcb50b8cfdc503",
+        "unmasking-dolphin-2.9.2-qwen2-7b--test.json": "308297a40a703e2d7fb5068bf8b5fd9211e6de69358fd96e57c8c2d8d65fe8f9",
+        "unmasking-dolphin-2.9.2-qwen2-7b--train.json": "0320d877281a41664603f32a5c45e98974771f6cc94453b6033c44145a06046a",
+        "unmasking-dolphin-2.9.2-qwen2-7b--val.json": "0a02a399376f327359ea46208f0cb7e9a94989ca2d8c2d218ac3a4e94bae8d12",
+        "unmasking-gpt4o--test.json": "9db6151afcc64782467d734f4d2a7a1997479313d6e05e32485f98913cb8219e",
+        "unmasking-gpt4o--train.json": "03a6eade0c6fab533b60999cb302fa177316b37616b8719369b02d1fe5671818",
+        "unmasking-gpt4o--val.json": "e8d9597792e72900df75fba48c59c369d2d748a2c7cd58a589a6bf6a2e3af823"
+      },
+      "intended_use": "twitter_detector_research_only",
+      "attribution": "Bryan E. Tuck and Rakesh Verma (2025), Unmasking the Imposters: How Censorship and Domain Adaptation Affect the Detection of Machine-Generated Tweets. Underlying TweetEval: Francesco Barbieri, Jose Camacho-Collados, Luis Espinosa-Anke and Leonardo Neves (2020).",
+      "processing_notice": "This project preserves released text, excludes uncertain/conflicting labels, deduplicates identity groups and changes evaluation partitions; Grok import is local and optional.",
+      "declared_license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "id": "grokset",
+      "acquisition_status": "metadata_downloaded_verified_text_not_available",
+      "raw_paths": [
+        "data/raw/twitter/grokset-*"
+      ],
+      "metadata_exports": [
+        "data/ready/grok-ids-v1"
+      ],
+      "text_exports": [
+        "data/ready/grok-text-v1"
+      ],
+      "external_text_input": "User-supplied --input JSONL, not downloaded or published by this project",
+      "license": "CC-BY-NC-4.0 for release metadata/annotations; tweet content rights separate",
+      "license_status": "declared_metadata_license_tweet_creator_and_platform_terms_apply",
+      "evidence_urls": [
+        "https://huggingface.co/datasets/bercev/GrokSet",
+        "https://arxiv.org/abs/2602.21236",
+        "https://github.com/sarahlz01/GrokResearch"
+      ],
+      "notes": [
+        "Non-commercial use only under the release license; individual tweet text remains subject to its own rights and platform terms.",
+        "No hydration API, account login, payment or redistribution is performed. Retain local input checksum and deletion lineage.",
+        "Generated annotations are discarded. Other participants are not certified human negatives. Assistant replies may contain quoted or copied human text."
+      ],
+      "pinned_revision": "ea35757c95f895b84b2abfb822ec33d180f7f43a",
+      "source_hashes": {
+        "grokset-README.md": "79b3aa499bb470e9477554af0c93c249f52b873a595dce2ec0704bcc993615a7",
+        "grokset-dehydrated.json": "73cd8f70d6991a85155afdcb9b0a16d8a2b2a0025d023edf7c3e08c1369f9c07"
+      },
+      "intended_use": "twitter_detector_research_only",
+      "attribution": "Matteo Migliarini, Berat Ercevik, Oluwagbemike Olowe, Saira Fatima, Sarah Zhao, Minh Anh Le, Vasu Sharma and Ashwinee Panda (2026), @GROKSET: Multi-party Human-LLM Interactions in Social Media.",
+      "processing_notice": "This project preserves released text, excludes uncertain/conflicting labels, deduplicates identity groups and changes evaluation partitions; Grok import is local and optional.",
+      "declared_license_url": "https://creativecommons.org/licenses/by-nc/4.0/"
     }
   ],
   "removal_tracking": "Raw paths may be shared: select raw files by acquisition metadata dataset ID. Removing a source requires rebuilding all listed derived exports and models, including parent-document and audit exports. Dataset IDs, parent IDs and input hashes trace retained text.",

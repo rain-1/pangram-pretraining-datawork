@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "release": "twitter-v1",
+  "files": {
+    "source.json": "1225b3029c43a86f4b82d9e67df627e1ffbe6d59ee11e51f47d910f7d7d8c4e4",
+    "selection.json": "8733d336b7e59b8471569569390a2cfb2cbf199cd2472d077010256ba2e4a796",
+    "licenses.snapshot.json": "2e62c6db97fb96bc1147714be8ee8ff642081377fe8e38fd0ca183ba4672ad71"
+  }
+}

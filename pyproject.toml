@@ -5,6 +5,7 @@ description = "Provenance-preserving human corpus and machine translation data p
 requires-python = ">=3.11"
 dependencies = [
     "datasketch==2.0.0",
+    "ijson==3.4.0.post0",
     "lingua-language-detector==2.1.1",
     "openpyxl==3.1.5",
     "pyarrow==25.0.1",

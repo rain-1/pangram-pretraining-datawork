@@ -1,6 +1,6 @@
 # Human-origin pretraining datawork
 
-This project separates two jobs: selecting pretraining text using provenance, and collecting labelled machine translations to evaluate a filter. The translation benchmarks are kept out of the pretraining corpus inputs.
+This project selects pretraining text using provenance and collects separate machine-translation and Twitter controls to evaluate detectors. Detector controls are kept out of the pretraining corpus inputs.
 
 For an AI or developer consuming the exact saved release, start with [DATA_HANDOFF.md](DATA_HANDOFF.md): pinned file paths, a verified Python loader, split boundaries and the separate translation controls.
 
@@ -39,6 +39,46 @@ Rerunning verifies the export without downloading or extracting again. The archi
 These are detector research controls, **not pretraining inputs**. Human translations are eligible human negatives. Individual literary translation rights, Google engine versions and generation dates remain unverified. The existing experimental detector is not prepared by this command and should not drive corpus removal: it falsely flags 71.3% of these human translations.
 
 Translation setup was tested in a fresh checkout with no archive: the official download matched its pin, every control and partition matched the original selection, and all 66 project tests passed.
+
+## Prepare the Twitter detector controls
+
+```bash
+uv run --frozen python prepare_twitter.py
+```
+
+This separate setup downloads approximately 12.6 MB of pinned releases and prepares **64,466 deduplicated English-labelled controls** in `data/ready/twitter-v1/{train,validation,test}.jsonl.gz`. Use `text` as the classifier input and `binary_target` as the benchmark label: **1 = generator-labelled output, 0 = provisional human reference**. None of these records is added to the human pretraining core.
+
+| Release | Human-labelled references | Generator-labelled outputs |
+| --- | ---: | ---: |
+| TweepFake | 12,781 | 7,945 |
+| Unmasking the Imposters | 4,194 | 39,546 |
+| Total | 16,975 | 47,491 |
+
+[TweepFake](https://github.com/tizfa/tweepfake_deepfake_text_detection) supplies posted tweets with published account classifications. The initial positive subset uses its GPT-2 and RNN categories; 4,840 unknown-method bot tweets are quarantined. [Unmasking the Imposters](https://huggingface.co/datasets/redasers/Unmasking-the-Imposters) supplies TweetEval references paired with documented outputs from nine LLM variants, including GPT-4o. The same references appear in every variant; preparation deduplicates them. A further 2,367 source records have conflicting human/generated labels for identical normalized text and are excluded. The authors describe the generation process in their [COLING paper](https://aclanthology.org/2025.coling-main.607/).
+
+These are **dataset labels, not certified individual human authorship**. Text is preserved as released, including upstream processing. TweepFake accounts, Unmasking reference/generated pairs and normalized exact duplicates stay in one partition. TweepFake's original tweet-level splits are replaced with account groups; Unmasking's held-out partitions take priority when connected groups overlap. Near duplicates and relationships between impersonating bots and their source accounts are not independently recovered. Keep dataset/model reports separate, and do not treat accuracy on this collection as a measured corpus-cleaning guarantee.
+
+Train/validation/test contain **48,543 / 7,537 / 8,386 examples**. The overlapping `records.jsonl.gz` is an audit export, and `quarantine.jsonl.gz` records exclusions; neither is extra training data. Short tweets are kept as individual examples and are never joined to satisfy the pretraining passage-length rule. Repeat setup to verify, or use `--verify-only`, `--offline`, `--cache` and `--output`. See the [frozen release](releases/twitter-v1/README.md) and [handoff](DATA_HANDOFF.md#twitter-detector-controls).
+
+### Optional GrokSet IDs and local text import
+
+```bash
+uv run --frozen python prepare_grok.py metadata
+```
+
+[GrokSet](https://huggingface.co/datasets/bercev/GrokSet) publishes IDs and metadata without tweet text. This optional command downloads its pinned **1.05 GB** JSON and creates `data/ready/grok-ids-v1/`: a disk index plus **252,029 English assistant-reply candidate IDs**. The observed file has 182,707 threads and 1,053,541 unique tweet IDs; these are measured release counts, not a claim that all IDs can still be hydrated. Generated annotations are discarded. The ID queue has no usable training text or binary labels.
+
+If you obtain original tweet text separately, create a UTF-8 JSONL file with `id` (numeric string), `original_text` and optional `lang`, then run:
+
+```bash
+uv run --frozen python prepare_grok.py import-text --input /path/to/original-tweets.jsonl
+```
+
+This exports assistant-labelled English reply positives to `data/ready/grok-text-v1/{train,validation,test}.jsonl.gz`. It accepts only the explicit `original_text` field, checks IDs against the pinned metadata, rejects other participants and language mismatches, and groups whole connected conversations and duplicated text before splitting. The input checksum and rejection reasons are saved. Local original text is not independently authenticated, and replies can quote human writing. **No Grok tweet text is currently available locally.** Hydration, platform access and any associated costs are handled separately; these scripts make no X API requests. Grok positives alone cannot provide a human-versus-AI evaluation, and combining collections requires cross-source overlap checks and regrouping.
+
+Licences and removal paths are tracked in `config/licenses.json` and each prepared release's snapshot. TweepFake tweet-text licensing is unresolved. Unmasking declares CC BY 4.0, with underlying tweet rights unverified. GrokSet declares CC BY-NC 4.0 for release metadata/annotations; tweet creator rights and platform terms remain separate. The Git repository contains code, hashes and licence records, without dataset prose or raw downloads.
+
+Twitter preparation was tested from a fresh checkout without cached data: all downloads matched their pins, exported controls and manifest were byte-identical to the local build, and all 81 project tests passed. The full Grok metadata download/index and replay verification completed locally; the text importer is tested with fixtures because original Grok tweet text is not available. Existing human-core and Google Translate releases also passed their verification checks.
 
 **The current v2 corpus contains 52,186 contiguous passages of 400–3,000 whitespace words, totalling 45,507,097 words.** It uses the downloaded news and Hansard, with source-specific footer cleanup and verified near-copy removal. The v1 artifacts remain preserved. Separate Par3 controls now supply 1,055 long Google Translate outputs and 2,272 human translations. The frozen experimental detector fails badly on those human controls and is excluded from corpus removal. These are pretraining candidates; no human-only guarantee or corpus contamination estimate has been measured. NEWSROOM files remain pending, and no paid Gigaword files are needed for this version.
 

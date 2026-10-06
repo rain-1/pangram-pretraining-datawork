@@ -90,6 +90,47 @@ The portable translation controls reproduce the legacy Par3 selection: 1,055 Goo
 
 The frozen model in `data/detector-v1/` falsely flagged 71.3% of Par3 human translations. **Do not use it for corpus removal.** These literary controls do not establish filtering performance on general English or corpus contamination. Generator versions, generation dates and individual translation rights remain unverified.
 
+## Twitter detector controls
+
+Run `uv run --frozen python prepare_twitter.py` to obtain the frozen TweepFake and Unmasking selection. The entry point and expected counts are in [the release recipe](releases/twitter-v1/README.md). This does not change or add to either pretraining corpus or the Google Translate controls.
+
+Ready inputs are `data/ready/twitter-v1/{train,validation,test}.jsonl.gz`, with 48,543 / 7,537 / 8,386 examples. In total there are 16,975 provisional human references and 47,491 generator-labelled outputs. Use **only `text` as classifier input**, with `binary_target` as benchmark label (0 reference, 1 generated). Preserve `dataset`, `engine`, `id`, `split_group`, original split, source revision and deduplication lineage for auditing. Never feed those metadata fields to the classifier. The references have `human_authorship_verified=false`; they must not be silently promoted to verified-human pretraining data.
+
+Verify before loading, then reuse the gzip loader shown above with the Twitter directory:
+
+```python
+from pathlib import Path
+from prepare_twitter import load_release, verify
+
+TWITTER = Path("data/ready/twitter-v1")
+selection, config, lock = load_release()
+print(verify(TWITTER, selection, config, lock))
+# Read TWITTER / "train.jsonl.gz", then use row["text"], row["binary_target"].
+```
+
+The partitioning retains whole TweepFake accounts and Unmasking prompt pairs, including all generator variants. Normalized exact duplicates share groups and contribute one binary example; conflicting labels are quarantined. Text is unchanged from upstream releases. `records.jsonl.gz` overlaps the binary files and is for provenance only. `quarantine.jsonl.gz` includes unknown-method bots and label conflicts and is not binary training data. This process does not detect all near duplicates, recover missing TweetEval authors, or establish individual tweet authorship. The class mix is imbalanced; evaluate each source/model separately and choose operating thresholds on representative verified references before deploying a filter.
+
+GrokSet support is separate and optional:
+
+```bash
+uv run --frozen python prepare_grok.py metadata
+uv run --frozen python prepare_grok.py import-text --input /path/to/original-tweets.jsonl
+```
+
+The first command downloads 1.05 GB of pinned dehydrated metadata to `data/raw/twitter/grokset-dehydrated.json` and prepares `data/ready/grok-ids-v1/{index.sqlite,assistant_candidates.jsonl.gz}`. The ID queue contains 252,029 English assistant-reply candidates without tweet text. Metadata-only integrity checks use `prepare_grok.py metadata --verify-only`. IDs are not pretraining or detector examples; generated annotations are discarded.
+
+The second command requires a local UTF-8 JSONL export of raw original tweet text, one unique tweet per line, with this schema (substitute actual values):
+
+```json
+{"id":"<numeric tweet ID>","original_text":"<original full tweet text>","lang":"en"}
+```
+
+`lang` is optional; when supplied it must agree with the English metadata. No implicit `text`, summary, translated text or cleaned-text field is accepted. Import validates IDs and roles against the pinned index. It exports only English assistant replies as label 1; other users remain unresolved, never label 0. Unknown IDs, non-English records, non-replies, repost text and conflicting metadata are rejected with reasons. Conversation components are computed using all release IDs, then merged for duplicated imported text. Input file and metadata manifest checksums are retained, and rerunning requires identical inputs and verifies the existing exports.
+
+The output is `data/ready/grok-text-v1/{train,validation,test}.jsonl.gz`, plus overlapping audit records and a manifest. No Grok text has been obtained yet. Local text authenticity depends on the hydration workflow; the importer cannot prove a string came from an ID. Assistant text may quote human material. Evaluate Grok separately with suitable human controls; combining it with other collections requires deduplication and new partitioning across the entire combination. No script here calls an authenticated platform API or incurs hydration charges.
+
+The frozen Twitter licence snapshot includes source declarations and unresolved creator rights. TweepFake CSV rights are unestablished; Unmasking declares CC BY 4.0 with underlying TweetEval rights unresolved; GrokSet metadata is CC BY-NC 4.0 with separate tweet rights and platform terms. Keep all Twitter controls outside human-only pretraining inputs. Raw files, audit prose, prepared controls and any local hydration input remain outside Git.
+
 ## Licences and portability
 
 Read the selected release's `licenses.snapshot.json` and `ATTRIBUTION.txt`, plus the live inventory at `config/licenses.json`. Licences are tracked, not universally cleared. WikiText has conflicting declared licence versions; Gutenberg's USA public-domain declarations do not settle every jurisdiction; news rights include unresolved cases. The inventory identifies raw and derived files affected by removing a source.

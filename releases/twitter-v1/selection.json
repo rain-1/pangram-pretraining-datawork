@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "release": "twitter-v1",
+  "audit_records": 105312,
+  "binary_examples": 64466,
+  "quarantined_records": 7207,
+  "audit_sha256": "8e456b84a3488e7614092156f7fe8fc551c46fe7ebc6c9d9d45d67f9609f5d21",
+  "selection_sha256": "45397571ceaafa985043676cc920c67a13f82531b1e17ea16e71d3e68d79a4fe",
+  "quarantine_sha256": "c5fb0fe58109614c4cb51dce9b88dee623ea6446b575e25e879e61175b17dcce",
+  "by_dataset_label": {
+    "tweepfake": {
+      "0": 12781,
+      "1": 7945
+    },
+    "unmasking": {
+      "0": 4194,
+      "1": 39546
+    }
+  },
+  "by_split_label": {
+    "train": {
+      "0": 10925,
+      "1": 37618
+    },
+    "validation": {
+      "0": 2552,
+      "1": 4985
+    },
+    "test": {
+      "0": 3498,
+      "1": 4888
+    }
+  },
+  "groups_per_split": {
+    "train": 3273,
+    "validation": 439,
+    "test": 448
+  },
+  "quarantine_reasons": {
+    "unknown_bot_method": 4840,
+    "conflicting_labels_for_identical_normalized_text": 2367
+  }
+}
